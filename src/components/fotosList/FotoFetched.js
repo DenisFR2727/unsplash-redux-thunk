@@ -54,6 +54,7 @@ const Modal = ({ fullSizePhotoUrl, onClose }) => {
         <div className="modal-content">
           <img src={fullSizePhotoUrl}  onClick={onClose} />
           <button onClick={onClose}>Close</button>
+          Hello world
         </div>
       </div>
     );

@@ -8,6 +8,7 @@ const initialState = {
       fotosLoadingStatus: 'idle',
       modalOpen: false,
       fullSizePhotoUrl: null,
+      setOption: "all"
 }
 
 export const fetchFotos = createAsyncThunk(
@@ -31,7 +32,10 @@ const fotosSlice = createSlice({
         closeFull(state) {
             state.modalOpen = false;
             state.fullSizePhotoUrl = null; 
-          }
+        },
+        optionSelect(state, action){
+            state.setOption = action.payload;
+        } 
     },
 
     extraReducers: (builder) => {
@@ -55,11 +59,15 @@ export const selectFotosLoadingStatus = createSelector(
     (state) => state.fotosLoadingStatus,
     (fotosLoadingStatus) => fotosLoadingStatus
   );
-
+export const setOption = createSelector(
+    state => state.setOption,
+    setOption => setOption
+)
 const {actions, reducer} = fotosSlice;
 export const {
     openWidthFull,
-    closeFull
+    closeFull,
+    optionSelect
 } = actions
 export default reducer;
 

@@ -27,6 +27,18 @@
     transform: translateX(-50%);
     text-align: center;
 }
+.likes_foto{
+    position: absolute;
+    top: 0;
+    left:50px
+} 
+/* .li_foto :nth-child(1){
+    position: absolute;
+    color: aqua;
+    top: 0;
+    right: 10%;
+    font-size: 20px;
+} */
 .modal {
     position: fixed;
     top: 0;

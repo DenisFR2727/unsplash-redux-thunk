@@ -1,5 +1,6 @@
 .render_fotos{
-    display: flex;
+    position: relative;
+    /* display: flex; */
     width: 1300px;
 }
 .render_fotos ul{
@@ -32,13 +33,20 @@
     top: 0;
     left:50px
 } 
-/* .li_foto :nth-child(1){
+.render_fotos .select_option{
+    width: 100px;
+    height: auto;
+    display: flex;
     position: absolute;
-    color: aqua;
-    top: 0;
-    right: 10%;
-    font-size: 20px;
-} */
+    left: 49px;
+}
+.info_images{
+    position: absolute;
+}
+.animation_scroll{
+    transition: transform 2s ease-in-out;
+}
+/* ---------------------------------Modal_________________ */
 .modal {
     position: fixed;
     top: 0;

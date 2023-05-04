@@ -1,0 +1,10 @@
+.filter_likes{
+    position: sticky;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import FotoFetched from '../content/fotosList/FotoFetched';
 import "./main.css";
-import Weather from '../content/starwarsList/Weather';
+import Weather from '../content/weatherCiti/Weather';
 const Main = (props) => {
     let selectedBook = props.selectedPage;
 

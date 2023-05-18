@@ -12,9 +12,9 @@ import {
          setInfoFoto} from "./FotoFetchedSlice";
 
 import "./fotoslist.css";
-import Filter from "../filterFotos/Filter";
-import Pagination from "../pagination/Pagination";
-import InfoFotoImage from "../modal/InfoFotoImage";
+import Filter from "../../filterFotos/Filter";
+import Pagination from "../../pagination/Pagination";
+import InfoFotoImage from "../../modal/InfoFotoImage";
 
 const FotoFetched = () => {
     const dispatch = useDispatch();
@@ -87,7 +87,7 @@ const clickFirstFotos = useCallback(() => {
        }
 },[fotosListRef])
 
-
+console.log(fotos.fotos)
 const renderFotos = renderFotosAll(allFotos ? fotos : fotos.slice(0, displayedFotos) )
 
     return (<div className="render_fotos">

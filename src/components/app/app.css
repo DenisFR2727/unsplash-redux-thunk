@@ -1,4 +1,7 @@
 .app{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+}
+.app .nav_content{
+    /* margin-top: 70px; */
 }

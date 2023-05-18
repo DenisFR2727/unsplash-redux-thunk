@@ -7,8 +7,7 @@ const selectLikes = (e) =>{
 }
     return (<div className="filter_likes">
                 
-              <select onChange={selectLikes}>
-              <p>Likes</p>   
+              <select onChange={selectLikes} placeholder="Likes">
                   <option value="all">All</option>
                   <option value="low">Low liks</option>
                   <option value="hight">Hight likes</option>

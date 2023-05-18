@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import fotosReducer from "../components/fotosList/FotoFetchedSlice";
+import { configureStore,combineReducers} from "@reduxjs/toolkit";
+import fotosReducer from "../components/content/fotosList/FotoFetchedSlice";
 
 const stringMiddleware = () => (next) => (action) => {
     if (typeof action === 'string') {
@@ -11,7 +11,7 @@ const stringMiddleware = () => (next) => (action) => {
 };
 
 const store = configureStore({
-    reducer: fotosReducer,
+    reducer: fotosReducer, 
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
     devTools: process.env.NODE_ENV !== 'production',
 })

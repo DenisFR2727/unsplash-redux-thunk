@@ -1,7 +1,7 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 // import { useHttp } from "../../hooks/http.hook";
 import { createSelector } from "@reduxjs/toolkit";
-
+import { fetchedFotos } from "../../thunk/index";
 
 const initialState = {
       fotos: [],
@@ -15,15 +15,8 @@ const initialState = {
       modalInfoFoto: false
 }
 
-export const fetchFotos = createAsyncThunk(
-    "fotos/fetchFotos",
-    async () => {
-      const response = await fetch(
-        "https://api.unsplash.com/photos/?client_id=z4UC9SyAL8_PdvMWlhcTxbW5pycwUGOtE7qPTClEj9U&per_page=999"
-      );
-      return await response.json();
-    }
-);
+export const fetchFotos = fetchedFotos;
+
 
 const fotosSlice = createSlice({
     name: 'fotos',
@@ -63,6 +56,7 @@ const fotosSlice = createSlice({
               .addCase(fetchFotos.rejected, state => {
                     state.fotosLoadingStatus = 'error';
                 })
+                
               .addDefaultCase(() => {})
     }
 })

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 const InfoFotoImage = ({onClose}) => {
       const info = useSelector((state) => state.infoFoto);
       console.log(info)
-    return (
+    return ( 
       <div className="modal">
         <div className="modal-content">
            <img src={info.urls.small_s3}/>
